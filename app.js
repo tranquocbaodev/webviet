@@ -44,4 +44,9 @@ app.use(function(err, req, res, next) {
   res.render('error');
 });
 
+var port = process.env.PORT || 3001;
+app.listen(port, function () {
+  console.log('server listening on port %d in %s mode', port, app.get('env'));
+});
+
 module.exports = app;
